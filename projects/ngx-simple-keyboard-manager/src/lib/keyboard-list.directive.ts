@@ -1,5 +1,4 @@
 import { FocusKeyManager } from '@angular/cdk/a11y';
-import { tap } from 'rxjs/operators';
 import {
   AfterViewInit,
   ContentChildren,

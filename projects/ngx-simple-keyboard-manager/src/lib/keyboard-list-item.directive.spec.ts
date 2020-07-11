@@ -1,5 +1,5 @@
+import { render, screen } from '@testing-library/angular';
 import { KeyboardListItemDirective } from './keyboard-list-item.directive';
-import { render, screen, fireEvent } from '@testing-library/angular';
 
 describe('KeyboardListItemDirective', () => {
   it('should render', async () => {

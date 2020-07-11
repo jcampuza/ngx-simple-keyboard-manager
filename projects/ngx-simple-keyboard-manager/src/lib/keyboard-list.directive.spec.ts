@@ -1,7 +1,7 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/angular';
 import * as KeyCodes from '@angular/cdk/keycodes';
-import { KeyboardListDirective } from './keyboard-list.directive';
+import { fireEvent, render, screen } from '@testing-library/angular';
 import { KeyboardListItemDirective } from './keyboard-list-item.directive';
+import { KeyboardListDirective } from './keyboard-list.directive';
 
 describe('KeyboardListDirective', () => {
   it('should render correctly', async () => {
