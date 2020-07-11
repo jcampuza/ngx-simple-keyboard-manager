@@ -2,26 +2,34 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Add module to `app.module.ts` or to for lazy loaded modules to whichever modules you would like this to be available in.
 
-## Code scaffolding
+```ts
+import { NgxSimpleKeyboardManagerModule } from 'ngx-simple-keyboard-manager';
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+@NgModule({
+  imports: [NgxSimpleKeyboardManagerModule]
+});
+```
 
-## Build
+## Usage
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Add the `keyboard-list` directive to any element that you would like to be keyboard navigable. Add `keyboard-list-item` to the list items that can be focused within this list. For styling you can add a `:focus` pseudoclass to the element.
 
-## Running unit tests
+```html
+<div keyboard-list>
+  <div keyboard-list-item>1</div>
+  <div keyboard-list-item>2</div>
+  <div keyboard-list-item>3</div>
+</div>
+```
 
-Run `npm run test` to execute the unit tests via Jest
+`keyboard-list` will become focusable, and the marked items will be navigable.
 
-## Running end-to-end tests
+## Configuration
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Inputs
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- horizontal - `boolean; default: false` -> Adds horizontal keyboard navigation functionality
